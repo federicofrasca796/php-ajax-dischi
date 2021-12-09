@@ -15,7 +15,9 @@
 
 <body>
     <div id="app">
-        <header></header>
+        <header id="site_header">
+            <img src="./assets/Spotify_logo_without_text.svg" alt="spotify logo" height="60%" />
+        </header>
         <main></main>
     </div>
 
