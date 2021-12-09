@@ -18,7 +18,27 @@
         <header id="site_header">
             <img src="./assets/Spotify_logo_without_text.svg" alt="spotify logo" height="60%" />
         </header>
-        <main></main>
+
+        <main id="site_main">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col">
+                        <div class="song_card">
+                            <!-- <div class="song_thumb">
+                                <img :src="imgSrc" alt="album cover" />
+                            </div>
+
+                            <div class="song_info">
+                                <h2 class="song_title">{{ songTitle }}</h2>
+                                <div class="song_author">{{ songAuthor }}</div>
+                                <div class="song_date">{{ songDate }}</div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
