@@ -23,17 +23,18 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col">
+                    <!-- VUE IMPLEMENTATION (MILESTONE2) -->
+                    <div class="col" v-for="disc in discs">
                         <div class="song_card">
-                            <!-- <div class="song_thumb">
-                                <img :src="imgSrc" alt="album cover" />
+                            <div class="song_thumb">
+                                <img :src="disc.poster" alt="album cover" />
                             </div>
 
                             <div class="song_info">
                                 <h2 class="song_title">{{ songTitle }}</h2>
                                 <div class="song_author">{{ songAuthor }}</div>
                                 <div class="song_date">{{ songDate }}</div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
