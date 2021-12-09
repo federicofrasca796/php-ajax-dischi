@@ -82,27 +82,33 @@ $discs = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajax Dischi</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <div id="app">
         <header id="site_header">
-            <img src="./assets/Spotify_logo_without_text.svg" alt="spotify logo" height="60%" />
+            <img src="./Spotify_logo_without_text.svg" alt="spotify logo" height="60%" />
         </header>
 
         <main id="site_main">
             <div class="container">
 
                 <div class="row">
-                    <?php foreach ($discs as $disc) {
-                        foreach ($disc as $key => $value) {
-                            var_dump($key, $value);
-                        };
-                    } ?>
-                    <div class="col">
+                    <?php foreach ($discs as $disc) : ?>
 
-                    </div>
+                        <div class="col">
+                            <div class="song_thumb">
+                                <img src="<?= $disc['poster'] ?>" alt="album cover" />
+                            </div>
+
+                            <div class="song_info">
+                                <h2 class="song_title"><?= $disc['title'] ?></h2>
+                                <div class="song_author"><?= $disc['author'] ?></div>
+                                <div class="song_date"><?= $disc['year'] ?></div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </main>
