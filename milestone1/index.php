@@ -98,14 +98,17 @@ $discs = [
                     <?php foreach ($discs as $disc) : ?>
 
                         <div class="col">
-                            <div class="song_thumb">
-                                <img src="<?= $disc['poster'] ?>" alt="album cover" />
-                            </div>
+                            <div class="song_card">
 
-                            <div class="song_info">
-                                <h2 class="song_title"><?= $disc['title'] ?></h2>
-                                <div class="song_author"><?= $disc['author'] ?></div>
-                                <div class="song_date"><?= $disc['year'] ?></div>
+                                <div class="song_thumb">
+                                    <img src="<?= $disc['poster'] ?>" alt="album cover" />
+                                </div>
+
+                                <div class="song_info">
+                                    <h3 class="song_title"><?= $disc['title'] ?></h3>
+                                    <div class="song_author"><?= $disc['author'] ?></div>
+                                    <div class="song_date"><?= $disc['year'] ?></div>
+                                </div>
                             </div>
                         </div>
                     <?php endforeach; ?>
