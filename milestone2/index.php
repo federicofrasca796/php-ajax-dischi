@@ -1,17 +1,7 @@
 <?php
-
+require __DIR__ . '/layouts/head.php'
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajax Dischi</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
 
 <body>
     <div id="app">
@@ -20,25 +10,7 @@
         </header>
 
         <main id="site_main">
-            <div class="container">
-
-                <div class="row">
-                    <!-- VUE IMPLEMENTATION (MILESTONE2) -->
-                    <div class="col" v-for="disc in discs">
-                        <div class="song_card">
-                            <div class="song_thumb">
-                                <img :src="disc.poster" alt="album cover" />
-                            </div>
-
-                            <div class="song_info">
-                                <h3 class="song_title">{{ disc.title }}</h3>
-                                <div class="song_author">{{ disc.author }}</div>
-                                <div class="song_date">{{ disc.year }}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php require __DIR__ . '/layouts/main.php' ?>
         </main>
     </div>
 
