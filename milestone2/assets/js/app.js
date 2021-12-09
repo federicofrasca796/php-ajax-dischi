@@ -3,14 +3,19 @@ const app = new Vue({
     data: {
         discs: null,
     },
+    methods: {
+        apiDiscs() {
+            axios
+                .get('./api/discs.php')
+                .then(r => {
+                    console.log(r);
+                    this.discs = r.data;
+                }).catch(e => {
+                    console.error(e);
+                });
+        }
+    },
     mounted() {
-        axios
-            .get('./api/discs.php')
-            .then(r => {
-                console.log(r);
-                this.discs = r.data;
-            }).catch(e => {
-                console.error(e);
-            });
+        this.apiDiscs();
     }
 })

@@ -31,9 +31,9 @@
                             </div>
 
                             <div class="song_info">
-                                <h2 class="song_title">{{ songTitle }}</h2>
-                                <div class="song_author">{{ songAuthor }}</div>
-                                <div class="song_date">{{ songDate }}</div>
+                                <h3 class="song_title">{{ disc.title }}</h3>
+                                <div class="song_author">{{ disc.author }}</div>
+                                <div class="song_date">{{ disc.year }}</div>
                             </div>
                         </div>
                     </div>
